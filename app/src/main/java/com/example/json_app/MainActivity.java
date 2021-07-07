@@ -152,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
         ExampleAdapter adapter = new ExampleAdapter(this, mExampleItem, listener);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
         recyclerView.setAdapter(adapter);
     }
 
@@ -160,8 +159,8 @@ public class MainActivity extends AppCompatActivity {
         listener = new ExampleAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View v, int position) {
-                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                intent.putExtra("Example Item", mExampleList.get(position));
+                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                intent.putExtra("username", mExampleList.get(position).getName());
                 startActivity(intent);
             }
         };
