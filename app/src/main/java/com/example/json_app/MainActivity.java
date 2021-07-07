@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static String JSON_URL = "http://hp-api.herokuapp.com/api/characters";
 
-    private List<ExampleItem> mExampleItem;
+    private List<ExampleItem> mExampleList;
     private RecyclerView recyclerView;
     private ExampleAdapter.RecyclerViewClickListener listener;
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mExampleItem = new ArrayList<>();
+        mExampleList = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerView);
 
 
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                    mExampleItem.add(model);
+                    mExampleList.add(model);
                 }
 
 
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            PutDataIntoRecyclerView(mExampleItem);
+            PutDataIntoRecyclerView(mExampleList);
 
         }
     }
@@ -160,8 +160,8 @@ public class MainActivity extends AppCompatActivity {
         listener = new ExampleAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View v, int position) {
-                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
-                intent.putExtra("name", mExampleItem.get(position).getName());
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                intent.putExtra("Example Item", mExampleList.get(position));
                 startActivity(intent);
             }
         };

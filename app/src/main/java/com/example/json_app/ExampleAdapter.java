@@ -40,9 +40,6 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.MyViewHo
     }
 
 
-
-
-
     @Override
     public void onBindViewHolder(@NonNull  ExampleAdapter.MyViewHolder holder, int position) {
 
