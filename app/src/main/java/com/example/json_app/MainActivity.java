@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v, int position) {
                 Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
-                intent.putExtra("username", mExampleList.get(position).getName());
+                intent.putExtra("Example Item", mExampleList.get(position));
                 startActivity(intent);
             }
         };
