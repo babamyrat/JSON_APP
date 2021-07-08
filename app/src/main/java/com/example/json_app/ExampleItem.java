@@ -59,6 +59,20 @@ public class ExampleItem implements Parcelable {
         name = in.readString();
         species = in.readString();
         gender = in.readString();
+        house = in.readString();
+        dateOfBirth = in.readString();
+        yearOfBirth = in.readString();
+        ancestry = in.readString();
+        eyeColour = in.readString();
+        hairColour = in.readString();
+        wood = in.readString();
+        core = in.readString();
+        length = in.readString();
+        patronus = in.readString();
+        hogwartsStudent = in.readString();
+        hogwartsStaff = in.readString();
+        actor = in.readString();
+        alive = in.readString();
         img = in.readString();
     }
 
@@ -230,6 +244,20 @@ public class ExampleItem implements Parcelable {
         dest.writeString(name);
         dest.writeString(species);
         dest.writeString(gender);
+        dest.writeString(house);
+        dest.writeString(dateOfBirth);
+        dest.writeString(yearOfBirth);
+        dest.writeString(ancestry);
+        dest.writeString(eyeColour);
+        dest.writeString(hairColour);
+        dest.writeString(wood);
+        dest.writeString(core);
+        dest.writeString(length);
+        dest.writeString(patronus);
+        dest.writeString(hogwartsStudent);
+        dest.writeString(hogwartsStaff);
+        dest.writeString(actor);
+        dest.writeString(alive);
         dest.writeString(img);
     }
 }
