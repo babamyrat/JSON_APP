@@ -46,15 +46,15 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.MyViewHo
 
         holder.name.setText(mExampleItem.get(position).getName());
         holder.species.setText(mExampleItem.get(position).getSpecies());
-        holder.gender.setText(mExampleItem.get(position).getHogwartsStudent());
+//        holder.gender.setText(mExampleItem.get(position).getHogwartsStudent());
 
         // using Glide
         Glide.with(mContext)
                 .load(mExampleItem.get(position).getImg())
                 .into(holder.img);
 
-        holder.wood.setText(mExampleItem.get(position).getWood());
-        holder.length.setText(mExampleItem.get(position).getLength());
+//        holder.wood.setText(mExampleItem.get(position).getWood());
+//        holder.length.setText(mExampleItem.get(position).getLength());
 
     }
 
@@ -73,10 +73,10 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.MyViewHo
 
         TextView name;
         TextView species;
-        TextView gender;
+//        TextView gender;
         ImageView img;
-        TextView wood;
-        TextView length;
+//        TextView wood;
+//        TextView length;
 
 
 
@@ -85,10 +85,10 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.MyViewHo
 
             name = itemView.findViewById(R.id.name_txt);
             species = itemView.findViewById(R.id.id_txt);
-            gender = itemView.findViewById(R.id.test_txt);
+//            gender = itemView.findViewById(R.id10.test_txt);
             img = itemView.findViewById(R.id.imageView);
-            wood = itemView.findViewById(R.id.wood_txt);
-            length = itemView.findViewById(R.id.length_txt);
+//            wood = itemView.findViewById(R.id.wood_txt);
+//            length = itemView.findViewById(R.id.length_txt);
             itemView.setOnClickListener(this);
 
         }

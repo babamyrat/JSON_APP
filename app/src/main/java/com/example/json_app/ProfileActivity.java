@@ -8,11 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.squareup.picasso.Picasso;
+
 
 
 public class ProfileActivity extends AppCompatActivity {
-    TextView textView;
+    TextView txtName, txtSpecies,txtGender ;
     ImageView image;
 
 
@@ -32,20 +32,20 @@ public class ProfileActivity extends AppCompatActivity {
         String name  = exampleItem.getName();
         String species  = exampleItem.getSpecies();
         String gender  = exampleItem.getGender();
-//        String img  = exampleItem.getImg();
 
 
 
-        image = findViewById(R.id.img);
 
-        textView = findViewById(R.id.textView10);
-        textView.setText(name);
+        image = findViewById(R.id.imageHarry);
 
-        textView = findViewById(R.id.textView11);
-        textView.setText(species);
+        txtName = findViewById(R.id.txtName);
+        txtName.setText(name);
 
-        textView = findViewById(R.id.textView12);
-        textView.setText(gender);
+        txtSpecies = findViewById(R.id.txtSpecies);
+        txtSpecies.setText(species);
+
+        txtGender = findViewById(R.id.txtGender);
+        txtGender.setText(gender);
 
         // using Glide
         try {
@@ -58,15 +58,6 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
-//
-//        String username = "Username not set";
-//
-//        Bundle extras = getIntent().getExtras();
-//        if (extras != null){
-//            username = extras.getString("username");
-//        }
-//
-//        textView.setText(username);
 
 
 
